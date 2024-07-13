@@ -173,4 +173,24 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  /**
+   * Hide success and error messages after 5 seconds
+   */
+  document.addEventListener("DOMContentLoaded", function() {
+    const successMessage = document.querySelector('.alert-success');
+    const errorMessage = document.querySelector('.alert-danger');
+
+    if (successMessage) {
+        setTimeout(() => {
+            successMessage.style.display = 'none';
+        }, 5000); // Hide after 5 seconds
+    }
+
+    if (errorMessage) {
+        setTimeout(() => {
+            errorMessage.style.display = 'none';
+        }, 5000); // Hide after 5 seconds
+    }
+  });
+
 })();
